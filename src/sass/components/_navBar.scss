@@ -1,0 +1,86 @@
+.logo{
+    position: absolute;
+    left: 70px;
+    font-size: 50px;
+    font-family: $logo;
+    font-weight: 600;
+    transition: all ease 0.3s;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.navBar{
+    background-color: $back_navBar;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+    height: 60px;
+    transition: all ease 0.3s;
+    & .navPages{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
+        height: 100%;
+    }
+    & .navPages:hover{
+        cursor: pointer;
+    }
+}
+.navPages a{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.693);
+    font-weight: 600;
+    font-size: 20px;
+    transition: all ease 0.3s;
+}
+.navPages a:hover{
+    color: #000;
+    background-color: $back;
+}
+
+
+@media (max-width: 900px) {
+    .logo{
+        font-size: 35px;
+    }
+}
+@media (max-width: 650px) {
+    .logo{
+        font-size: 35px;
+        left: 20px;
+    }
+    .navPages{
+        flex-direction: column;
+        
+    }
+    .navPages a{
+        font-size: 15px;
+    }
+    .navBar{
+        height: auto;
+    }
+}
+@media (max-width: 450px) {
+    .logo{
+        font-size: 25px;
+    }
+    .navPages a{
+        font-size: 13px;
+    }
+}
+@media (max-width: 320px) {
+    .logo{
+        font-size: 20px;
+    }
+}

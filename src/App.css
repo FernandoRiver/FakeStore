@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap");
+body::-webkit-scrollbar {
+  width: 3px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #2c2c2c;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginContainer {
+  background-color: #FFFAE6;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  min-width: 500px;
+  max-width: 40%;
+  min-height: 500px;
+  max-height: 40%;
+  padding: 5px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.241);
+}
+
+.login h2 {
+  font-size: 25px;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+}
+
+.loginTitle {
+  font-size: 30px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.loginData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 50%;
+  margin-top: 40px;
+}
+
+.loginData input {
+  margin: 10px 0;
+  --input-border: rgba(0, 0, 0, 0);
+  --input-focus-h: 245;
+  height: 25px;
+}
+.loginData input::selection {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.buttonContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.loginButton {
+  width: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.344);
+  transition: all ease 0.2s;
+}
+.loginButton:hover {
+  background-color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.61);
+}
+
+.changeLogin {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}
+.changeLogin:hover {
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  left: 70px;
+  font-size: 50px;
+  font-family: "Neonderthaw", cursive;
+  font-weight: 600;
+  transition: all ease 0.3s;
+}
+.logo:hover {
+  cursor: pointer;
+}
+
+.navBar {
+  background-color: #c5dfdb;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+  height: 60px;
+  transition: all ease 0.3s;
+}
+.navBar .navPages {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  height: 100%;
+}
+.navBar .navPages:hover {
+  cursor: pointer;
+}
+
+.navPages a {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.693);
+  font-weight: 600;
+  font-size: 20px;
+  transition: all ease 0.3s;
+}
+
+.navPages a:hover {
+  color: #000;
+  background-color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .logo {
+    font-size: 35px;
+  }
+}
+@media (max-width: 650px) {
+  .logo {
+    font-size: 35px;
+    left: 20px;
+  }
+
+  .navPages {
+    flex-direction: column;
+  }
+
+  .navPages a {
+    font-size: 15px;
+  }
+
+  .navBar {
+    height: auto;
+  }
+}
+@media (max-width: 450px) {
+  .logo {
+    font-size: 25px;
+  }
+
+  .navPages a {
+    font-size: 13px;
+  }
+}
+@media (max-width: 320px) {
+  .logo {
+    font-size: 20px;
+  }
+}
+.categorias {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.opcionesButton {
+  text-align: center;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  font-family: "Roboto Mono", monospace;
+  padding: 5px 10px;
+}
+.opcionesButton:hover {
+  cursor: pointer;
+}
+
+.opciones {
+  position: relative;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.opciones ul {
+  background-color: #c5dfdb;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  margin: 5px 0;
+  padding: 10px 0;
+  z-index: 0;
+  position: absolute;
+  transition: all ease 0.5s;
+}
+
+ul li {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0);
+  transition: all ease 0.2s;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
+}
+ul li:hover {
+  border-bottom: 1px dashed #000;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.star li {
+  font-size: 15px;
+}
+
+.show {
+  top: 30px;
+}
+
+.hidden {
+  top: -260px;
+  z-index: -30;
+  opacity: 0;
+}
+
+@media (max-width: 650px) {
+  .opciones {
+    font-size: 15px;
+  }
+
+  ul li {
+    font-size: 13px;
+  }
+}
+@media (max-width: 450px) {
+  .opciones {
+    font-size: 10px;
+  }
+
+  ul li {
+    font-size: 13px;
+  }
+}
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.categoria {
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000;
+  width: 100%;
+}
+
+.lista {
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  overflow: hidden;
+  height: auto;
+  margin: 0 auto;
+}
+
+.resGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+}
+
+.loading {
+  width: 100vh;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.loading p {
+  border: 5px solid rgba(0, 0, 0, 0.659);
+  color: rgba(0, 0, 0, 0.659);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-family: "Neonderthaw", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 1.5s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 900px) {
+  .lista {
+    margin: 0;
+    width: 100%;
+  }
+
+  .categoria {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .opciones {
+    font-size: 10px;
+  }
+
+  ul li {
+    font-size: 13px;
+  }
+
+  .categoria {
+    font-size: 15px;
+  }
+}
+.itemContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.itemImg {
+  min-width: 150px;
+  max-width: 100%;
+  border-right: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+
+.itemImg img {
+  width: 80%;
+}
+
+.itemData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+}
+
+.desc {
+  background-color: #ffffff;
+  width: 95%;
+  padding: 5px 5px;
+  border-radius: 5px;
+  margin: 10px auto;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .itemContainer {
+    grid-template-columns: 1fr;
+    margin: 0;
+    width: 100%;
+  }
+
+  .itemImg {
+    border-color: rgba(0, 0, 0, 0);
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .desc {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .itemImg {
+    max-width: 50%;
+  }
+}
+.card {
+  width: 300px;
+  height: 400px;
+  margin: 10px auto;
+  border: 1px dashed #000;
+  text-align: left;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imagen {
+  width: 80%;
+  min-height: 70%;
+  max-height: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagen:hover {
+  cursor: pointer;
+}
+.imagen img {
+  max-width: 100%;
+  max-height: 250px;
+}
+
+.data {
+  background-image: linear-gradient(to bottom, #000 0%, #FFFAE6 1%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25%;
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.576);
+  -webkit-box-shadow: inset 0px 4px 9px -5px #000000;
+  box-shadow: inset 0px 4px 9px -5px #000000;
+}
+
+.titulo {
+  font-size: 15px;
+  font-weight: 800;
+  font-family: "Roboto Mono", monospace;
+  width: 90%;
+  height: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ratio {
+  color: #B3A1A1;
+}
+
+.cardBottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.precio {
+  background-color: #18A558;
+  color: #ffffff;
+  padding: 2px 2px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.addCart {
+  border: 1px solid #8FB399;
+  color: #221f1f;
+  padding: 2px 4px;
+  border-radius: 5px;
+  transition: all ease 0.15s;
+}
+.addCart:hover {
+  background-color: #8FB399;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 370px) {
+  .card {
+    width: 200px;
+    height: 380px;
+  }
+}

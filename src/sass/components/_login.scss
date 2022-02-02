@@ -1,0 +1,76 @@
+.login{
+    // background-color: $back_navBar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.loginContainer{
+    background-color: $back_sdw;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    min-width: 500px;
+    max-width: 40%;
+    min-height: 500px;
+    max-height: 40%;
+    padding: 5px 20px;
+
+    border: 1px solid rgba(0, 0, 0, 0.241);
+}
+.login h2{
+    font-size: 25px;
+    font-family: $text;
+    margin: 0;
+}
+.loginTitle{
+    font-size: 30px;
+    font-family: $titulo;
+}
+
+.loginData{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 50%;
+    margin-top: 40px;
+}
+
+.loginData input{
+    margin: 10px 0;
+    --input-border: rgba(0, 0, 0, 0);
+    --input-focus-h: 245;
+
+    height: 25px;
+    &::selection{
+        border-color: rgba(0, 0, 0, 0);
+    }
+}
+.buttonContainer{
+    width: 100%;
+    text-align: center;
+}
+.loginButton{
+    width: 100px;
+    border:1px solid rgba(0, 0, 0, 0.344);
+    transition: all ease 0.2s;
+
+    &:hover{
+        background-color: $back;
+        border-color: rgba(0, 0, 0, 0.61);;
+    }
+}
+.changeLogin{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
